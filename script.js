@@ -379,7 +379,7 @@ function redrawMarker(){
 
 function updateTimer(){
 	var elementTime=$(pokeMarker._icon).find(".remainingtext");
-	elementTime.html(timeSince(pokeMarker.time));
+	elementTime.html(timeSince(pokemonList.time));
 	var amount = Math.min(30, (Date.now()-pokemonList.time)/1000/60*25);
 	if(amount >= 15){
 		elementTime.css('background-color','#E'+(parseInt(30-amount)).toString(16)+'0');
