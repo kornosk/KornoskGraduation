@@ -352,7 +352,6 @@ if(filtercookie){var filterlist=filtercookie.split(cookiedelimchar);
 	});
 	$('.close').on('click',function(){$('.window').removeClass('show');
 		$('.nearby, .left, .center, .right, .leaflet-control-zoom').removeClass('hidden');
-		map.locate();
 		stopAnimateSampleIcon();
 	});
 	$('form.search').on('submit',function(e){e.preventDefault();});
@@ -437,6 +436,7 @@ jQuery.getJSON("https://api.myjson.com/bins/2f5ag", function(data){
 		pokeMarker = new L.marker(new L.LatLng(data.lat,data.lng),{icon:createPokeIcon(1,Date.now(),false)});
 		map.addLayer(pokeMarker);
 		markerAdded = true;
+		map.panTo(pokeMarker._latlng);
 	}
 	pokemonList = data;
 	redrawMarker();
