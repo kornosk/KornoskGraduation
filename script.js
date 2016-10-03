@@ -452,23 +452,23 @@ function timeSince(date) {
     var interval = Math.floor(seconds / 31536000);
 
     if (interval > 1) {
-        return interval + " Y";
+        return interval + " yr ago";
     }
     interval = Math.floor(seconds / 2592000);
     if (interval > 1) {
-        return interval + " M";
+        return interval + " mth ago";
     }
     interval = Math.floor(seconds / 86400);
     if (interval > 1) {
-        return interval + " D";
+        return interval + " d ago";
     }
     interval = Math.floor(seconds / 3600);
     if (interval > 1) {
-        return interval + " h";
+        return interval + " h ago";
     }
     interval = Math.floor(seconds / 60);
     if (interval > 1) {
-        return interval + " m";
+        return interval + " m ago";
     }
     return Math.floor(seconds) + " s ago";
 }
