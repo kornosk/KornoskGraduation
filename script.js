@@ -380,7 +380,7 @@ function redrawMarker(){
 function updateTimer(){
 	var elementTime=$(pokeMarker._icon).find(".remainingtext");
 	elementTime.html(timeSince(pokemonList.time));
-	var amount = Math.min(30, (Date.now()-pokemonList.time)/1000/60*25);
+	var amount = Math.min(30, (Date.now()-pokemonList.time)/1000/60*40);
 	if(amount >= 15){
 		elementTime.css('background-color','#E'+(parseInt(30-amount)).toString(16)+'0');
 	}else{
@@ -440,6 +440,7 @@ jQuery.getJSON("https://api.myjson.com/bins/2f5ag", function(data){
 	}
 	pokemonList = data;
 	redrawMarker();
+	updateTimer();
 });
 },5000);
 
