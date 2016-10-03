@@ -43,23 +43,24 @@
     <h1>North Graduation Map</h1>
     <div class="window infowindow" style="height:400px;">
         <strong>ยินดีต้อนรับสู่แผนที่หาตำแหน่ง North</strong><br /><br />
-        ไปเยี่ยมชมเฟสบุ๊คของเราได้ที่นี่ <a href="https://www.facebook.com/napat.lipimongkol" target="_blank">Facebook</a>!</p>
+        เยี่ยมชมเฟสบุ๊คได้ที่นี่ <a href="https://www.facebook.com/napat.lipimongkol" target="_blank">Facebook</a>!</p>
         <script>
-        function replaceWithNumber(){
-            this.innerHTML = " โทร: " +
+        function replaceWithNumber(x){
+            x.innerHTML = " โทร: " +
             String.fromCharCode(48) + String.fromCharCode(56) + String.fromCharCode(51) +
             "-" + 
             String.fromCharCode(48) + String.fromCharCode(51) + String.fromCharCode(56) +
             "-" +
             String.fromCharCode(54) + String.fromCharCode(52) + String.fromCharCode(56) + String.fromCharCode(50);
-            return false;
         }
         </script>
-        <strong>ประกาศ: <span color='red'>ถ้าหากหาไม่เจอสามารถ<a onclick="return replaceWithNumber(this)">โทรศัพท์</a>หรือแชทมาได้ครับ</span></strong> <br />
-        <div class="displaypokemon" data-pokeid="58" style="color:black;position:absolute;margin-top:165px;margin-left:100px;"><div class="pokeimg" style="margin-left:22px;margin-bottom:4px;"><img id="sampleicon" src="http://tools.immuneepitope.org/static/images/loading.gif" ></div><div id="samplefreq" class="remainingtext" data-expire="1475326705013" style="background-color: rgb(238, 120, 0);width:84px;">เวลาsyncล่าสุด</div></div>
+        <strong>ประกาศ: <span color='red'>ถ้าหากหาไม่เจอสามารถ<a href="javascript:replaceWithNumber(this);">โทรศัพท์</a>หรือแชทมาได้ครับ</span></strong> <br />
+        <div class="displaypokemon" data-pokeid="58" style="color:black;position:absolute;margin-top:235px;margin-left:55px;"><div class="pokeimg" style="margin-left:22px;margin-bottom:4px;"><img id="sampleicon" src="me.png" ></div><div id="samplefreq" class="remainingtext" data-expire="1475326705013" style="background-color: rgb(238, 120, 0);width:84px;">เวลาsyncล่าสุด</div></div>
         <p><strong>ซ้อม</strong> 8 ต.ค. <strong>ว่าง</strong> 8:30-11:00 น.</p>
         <p><strong>รับจริง</strong> 20 ต.ค. <strong>ว่าง</strong> 13:00-16:00 น.</p>
         <p><strong>รับเหรียญทอง</strong> 21 ต.ค. <strong>ว่าง</strong> 8:30-12:00 น.</p>
+        <div style="color:black;position:absolute;margin-top:5px;margin-left:95px;"><strong>ตำแหน่งของ North</strong></div>
+        <br><br><br>
         <hr />  
         <p>ขอบคุณที่มาถ่ายรูปรับปริญญาด้วยกันครับ!</p>
         <button class="close">
