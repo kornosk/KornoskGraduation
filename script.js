@@ -436,6 +436,7 @@ jQuery.getJSON("https://api.myjson.com/bins/2f5ag", function(data){
 	if(!markerAdded){
 		pokeMarker = new L.marker(new L.LatLng(data.lat,data.lng),{icon:createPokeIcon(1,Date.now(),false)});
 		map.addLayer(pokeMarker);
+		markerAdded = true;
 	}
 	pokemonList = data;
 	console.log(JSON.stringify(data));
