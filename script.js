@@ -475,8 +475,9 @@ function timeSince(date) {
 }
 
 function open_facebook(){
-	setTimeout(function () { var newWindow = window.open('fb://profile/1196052119'); }, 5000);
-	var newWindow = window.open("https://www.facebook.com/kornraphop.kawintiranon");
+	// setTimeout(function () { var newWindow = window.open('fb://profile/1196052119'); }, 10000);
+	// var newWindow = window.open("https://www.facebook.com/kornraphop.kawintiranon");
+	var newWindow = window.open('fb://profile/1196052119');
 	newWindow.focus()
 }
 
