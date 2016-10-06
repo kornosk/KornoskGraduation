@@ -478,3 +478,8 @@ function open_facebook(){
 	var newWindow = window.open("https://www.facebook.com/kornraphop.kawintiranon");
 	newWindow.focus()
 }
+
+$('.slicknav_menu').css({
+	"position": "relative",
+	"right": "5%"
+});
