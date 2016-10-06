@@ -476,7 +476,7 @@ function timeSince(date) {
 
 function open_facebook(){
 	console.log('newFB');
-	var newWindow = window.open('fb://profile/kornraphop.kawintiranon');
+	var newWindow = window.open('fb://profile/%@kornraphop.kawintiranon');
 	// var newWindow = window.open("https://www.facebook.com/kornraphop.kawintiranon");
 	newWindow.focus()
 }
