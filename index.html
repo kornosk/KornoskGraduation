@@ -34,11 +34,11 @@
     <!-- Slicknav CSS -->
     <link rel="stylesheet" href="https://fastpokemap.se/slicknav/slicknav.css" />
     
-    <!-- Font Awesome CSS -->
-    <link href="css/font-awesome.css" rel="stylesheet" media="screen">
-    
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- Font Awesome CSS -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" media="screen">
 
     <!-- Javascript -->
     <script src="https://fastpokemap.se/extjs/jquery-3.1.0.min.js"></script>
@@ -72,15 +72,15 @@
         <div class="fpm-top-nav">
             <!-- Facebook -->
             <span class="top-nav-item">
-                <div type="button" class="btn btn-primary" onclick="open_facebook()">เฟสบุ้ค<i class="fa fa-facebook-square fa-lg"></i></div>
+                <div type="button" class="btn btn-primary" onclick="open_facebook()"><span class="fa fa-facebook-square fa-lg" aria-hidden="true"></span>&nbsp; เฟสบุ้ค</div>
             </span>
             <!-- Google Map -->
             <span class="top-nav-item">
-                <div type="button" class="btn btn-warning" onclick="open_google_map()">กูเกิ้ลแมพ</div>
+                <div type="button" class="btn btn-warning" onclick="open_google_map()"><i class="fa fa-map"></i>&nbsp; กูเกิ้ลแมพ</div>
             </span>
             <!-- Button trigger modal -->
             <span class="top-nav-item">
-                <div type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+                <div type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal"><i class="fa fa-info-circle"></i>&nbsp; 
                     ประกาศ
                 </div>
             </span>
@@ -90,12 +90,12 @@
     <!-- Mobile Header -->
     <div class="mobile-header">
         <ul id="menu">
-            <li><a class="scroll" onclick="open_facebook()"><i class="fa fa-facebook-square" aria-hidden="true"></i>&nbsp; เฟสบุ้ค</a></li>
+            <li><a class="scroll" onclick="open_facebook()"><i class="fa fa-facebook-square"></i>&nbsp; เฟสบุ้ค</a></li>
             <li>
-                <a class="scroll" onclick="open_google_map()"><i class="fa fa-map" aria-hidden="true"></i>&nbsp; กูเกิ้ลแมพ</a>
+                <a class="scroll" onclick="open_google_map()"><i class="fa fa-map"></i>&nbsp; กูเกิ้ลแมพ</a>
             </li>
             <li>
-                <a class="scroll" data-toggle="modal" data-target="#myModal"><i class="fa fa-info-circle" aria-hidden="true"></i>&nbsp; ประกาศ</a>
+                <a class="scroll" data-toggle="modal" data-target="#myModal"><i class="fa fa-info-circle"></i>&nbsp; ประกาศ</a>
             </li>
         </ul>
     </div>
