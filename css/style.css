@@ -600,3 +600,8 @@ input[type='checkbox']:checked {
 .modal-body {
     text-align: center;
 }
+
+/* Mobile Menu */
+div.mobile-header ul li {
+    margin: 5px;
+}
