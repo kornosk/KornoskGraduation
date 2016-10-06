@@ -5,7 +5,7 @@ body {
     font-family: "Lato",Helvetica,Arial,sans-serif;
     overflow: hidden;
     margin: 0;
-    background: #EDF9EA;
+    background: black;
 }
 body h1, body h2 {
     display: none;
@@ -92,7 +92,7 @@ body h1, body h2 {
     color: #555555 !important;
 }
 .desktop-header {
-    height: 90px;
+    height: 10%;
     overflow: hidden;
 }
 .mobile-header, .slicknav_menu {
@@ -103,7 +103,7 @@ body h1, body h2 {
     overflow: hidden;
 }
 #map {
-    height: calc(100vh - 180px);
+    height: calc(100vh - 20%);
     width: 100vw;
 }
 #disabled {
@@ -591,4 +591,12 @@ input[type='checkbox']:checked {
 }
 .filteritem label {
     vertical-align: middle;
+}
+
+.modal-dialog" {
+    display: inline-block;
+}
+
+.modal-body {
+    text-align: center;
 }

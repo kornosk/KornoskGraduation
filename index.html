@@ -9,11 +9,17 @@
     <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,minimal-ui" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes">
-    <meta property="og:image" content="http://www.eng.chula.ac.th/sites/default/files/images/13304993_10153394887461920_3499917336318636275_o.jpg" />
+
+    <!-- Facebook -->
+      <meta property="og:title" content="Kornosk Graduation Map" />
+      <meta property="og:url" content="https://www.facebook.com/kornraphop.kawintiranon" />
+      <meta property="og:image" content="https://www.life360.com/img/user_images/90b5430d-98cf-48b4-95cb-37202f7346b1/0632af4b-80ab-4cfc-96f4-8ac4aeb10fdf.jpg?fd=2" />
+      <meta property="og:site_name" content="Kornosk Graduation Map"/>
+      <meta property="og:description" content="Personal map website of Kornraphop Kawintiranon for Graduation Ceremony, Bangkok, Thailand"/>
 
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet"/>
     <link rel="apple-touch-icon" sizes="180x180" href="https://fastpokemap.se/img/apple-touch-icon.png">
     <link rel="icon" type="image/png" href="https://fastpokemap.se/img/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://fastpokemap.se/img/favicon-16x16.png" sizes="16x16">
@@ -23,7 +29,7 @@
     <!-- Font Awesome CSS -->
     <link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
     <!-- Bootstrap core CSS -->
-    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 
     <!-- Javascript -->
     <script src="https://fastpokemap.se/extjs/jquery-3.1.0.min.js"></script>
@@ -49,59 +55,30 @@
   <body ontouchstart="">
     <h1>Kornosk Graduation Map</h1>
 
-    <!-- Body of Annoucement -->
-    <div class="window infowindow" style="height:400px;">
-        <strong>ยินดีต้อนรับสู่แผนที่หาตำแหน่ง Kornosk</strong><br /><br />
-        เยี่ยมชมเฟสบุ๊คได้ที่นี่ <a href="https://www.facebook.com/kornraphop.kawintiranon" target="_blank">Facebook</a>!</p>
-        <strong>ประกาศ: <span color='red'>ถ้าหากหาไม่เจอสามารถ<a id="mobileTxt" href="javascript:void(0)">โทรศัพท์</a>หรือแชทมาได้ครับ</span></strong>
-        <script>
-            $('#mobileTxt').click(function() {
-                this.innerHTML = " โทร: " +
-                String.fromCharCode(48) + String.fromCharCode(56) + String.fromCharCode(53) +
-                "-" + 
-                String.fromCharCode(51) + String.fromCharCode(51) + String.fromCharCode(57) +
-                "-" +
-                String.fromCharCode(56) + String.fromCharCode(48) + String.fromCharCode(48) + String.fromCharCode(49);
-            });
-        </script>
-        <br/>
-
-        <div class="displaypokemon" data-pokeid="58" style="color:black;position:absolute;margin-top:243px;margin-left:77px;"><div class="pokeimg" style="margin-right:3px;margin-bottom:4px;"><img id="sampleicon" src="https://life360-img.s3.amazonaws.com/img/user_images/90b5430d-98cf-48b4-95cb-37202f7346b1/0632af4b-80ab-4cfc-96f4-8ac4aeb10fdf.jpg?fd=2" ></div><div id="samplefreq" class="remainingtext" data-expire="1475326705013" style="background-color: rgb(238, 120, 0);width:84px;">เวลาsyncล่าสุด</div></div>
-
-        <p><strong>ซ้อม</strong> 8 ต.ค. <strong>ว่าง</strong> 8:30-11:00 น.</p>
-        <p><strong>รับจริง</strong> 20 ต.ค. <strong>ว่าง</strong> 13:00-16:00 น.</p>
-        
-        <div style="color:black;position:absolute;margin-top:5px;margin-left:95px;"><strong>ตำแหน่งของ Kornosk</strong></div>
-        <br><br><br>
-        <hr />  
-        <p>ขอบคุณที่มาถ่ายรูปรับปริญญาด้วยกันครับ!</p>
-        <button class="close">
-         X
-        </button>
-
-
-    </div>
-
-    <!-- Desktop Header -->
+    <!-- Header -->
     <div class="desktop-header">
-        <div class="fpm-top-title">Kornosk Graduation Map</div>        
+        <div class="fpm-top-title">Kornosk Graduation Map</div>
+
+        <!-- Button list -->
         <div class="fpm-top-nav">
+            <!-- Facebook -->
             <span class="top-nav-item">
-                <!-- Test Google Map -->
-                <button onclick="open_google_map()">GG</button>
-                <button><a href="https://www.facebook.com/kornraphop.kawintiranon"><i class="fa fa-facebook-square fa-lg"></i></a></button>
+                <div type="button" class="btn btn-primary" onclick="open_facebook()">เฟสบุ้ค<i class="fa fa-facebook-square fa-lg"></i></div>
+            </span>
+            <!-- Google Map -->
+            <span class="top-nav-item">
+                <div type="button" class="btn btn-warning" onclick="open_google_map()">กูเกิ้ลแมพ</div>
+            </span>
+            <!-- Button trigger modal -->
+            <span class="top-nav-item">
+                <div type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+                    ประกาศ
+                </div>
             </span>
         </div>
     </div>
 
-    <!-- Mobile Header -->
-    <div class="mobile-header">
-        <ul id="menu">
-            <li>
-                <a href="https://www.facebook.com/kornraphop.kawintiranon"><i class="fa fa-facebook-square fa-lg"></i></a>
-            </li>
-        </ul>
-    </div>
+    <!-- Map -->
     <div id="map">
         <div class="right">
              <button class="filter hidden" id="openfilter">
@@ -115,6 +92,50 @@
             </button>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></div>
+            <h4 class="modal-title" id="myModalLabel">ประกาศ</h4>
+          </div>
+
+          <!-- Body of Annoucement -->
+          <div class="modal-body row">
+            <div class="col-md-12">
+                <p><strong style="float: center;">ยินดีต้อนรับสู่แผนที่หาตำแหน่ง Kornosk</strong></p>
+
+                <script>
+                    $('#mobileTxt').click(function() {
+                        this.innerHTML = " โทร: " +
+                        String.fromCharCode(48) + String.fromCharCode(56) + String.fromCharCode(53) +
+                        "-" + 
+                        String.fromCharCode(51) + String.fromCharCode(51) + String.fromCharCode(57) +
+                        "-" +
+                        String.fromCharCode(56) + String.fromCharCode(48) + String.fromCharCode(48) + String.fromCharCode(49);
+                    });
+                </script>
+                <br/>
+                <p><strong><a id="mobileTxt" href="javascript:void(0)">โทรศัพท์</a></strong> 085-339-8001</p>
+                <p><strong>ซ้อม</strong> 8 ต.ค. <strong>ว่าง</strong> 8:00-11:00 น.</p>
+                <p><strong>รับจริง</strong> 20 ต.ค. <strong>ว่าง</strong> 13:00-18:00 น.</p>
+                <p>ขอบคุณที่มาถ่ายรูปรับปริญญาด้วยกันครับ!</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div type="button" class="btn btn-default" data-dismiss="modal">ปิด</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script after document is ready -->
+    <script type="text/javascript">
+        // Start announcement modal
+        $('#myModal').modal('show');
+    </script>
 
     <!-- If no Javascript compiler -->
     <noscript>
