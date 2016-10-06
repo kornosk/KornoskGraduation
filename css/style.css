@@ -129,7 +129,7 @@ body h1, body h2 {
         display: none;
     }
     .slicknav_menu {
-        display:inline-block;
+        display:block;
     }
     .adroom {
         height: 50px;
