@@ -242,8 +242,8 @@ if(window.navigator.userAgent.indexOf('iPhone')!=-1&&window.navigator.standalone
 };
 $(function(){$('.nearby').hide();
 	$('#menu').slicknav({label:''});
-	if(/iPad|iPhone|iPod/.test(navigator.userAgent)){$('.slicknav_menu').prepend('<div class="message"><strong>North Graduation Map</strong></div>');
-}else if(/(android)/i.test(navigator.userAgent)){$('.slicknav_menu').prepend('<div class="message"><strong>North Graduation Map</strong></div>');
+	if(/iPad|iPhone|iPod/.test(navigator.userAgent)){$('.slicknav_menu').prepend('<div class="message"><strong>Kornosk Graduation Map</strong></div>');
+}else if(/(android)/i.test(navigator.userAgent)){$('.slicknav_menu').prepend('<div class="message"><strong>Kornosk Graduation Map</strong></div>');
 };
 var reversedPokemonNames=_.invert(pokemonNames);
 var orderedPokemonNames={};
