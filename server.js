@@ -2,8 +2,11 @@ $('.sidebar-controls').children()[1].click();
 setInterval(function(){
 	try{
 		$('.modal-footer.ng-scope').children()[0].click();
-	}catch(err){}
+	}catch(err){
+
+	}
 },1000);
+
 setInterval(function(){
 	if($('.icon.icon-refresh')[1].parentNode.parentNode.parentNode.children[0].children[1].innerText == "Kornraphop Kawintiranon ADMIN"){
 		if($('.family-members').children()[2].children[1].children[2].className == "ng-hide") {
@@ -20,6 +23,8 @@ setInterval(function(){
 		console.log("error");
 	}
 },10000);
+
+// Update location and upload to myJSON server
 function updateJSON(x){
 	$.ajax({
     		url:"https://api.myjson.com/bins/2f5ag",

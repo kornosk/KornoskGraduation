@@ -15,7 +15,7 @@ var isLoading=false;
 var isBusy=false;
 L.HtmlIcon=L.Icon.extend({options:{},initialize:function(options){L.Util.setOptions(this,options);
 },createIcon:function(){var div=document.createElement('div');
-if(this.options.hide){div.innerHTML='<div class="displaypokemon hidden" data-pokeid="'+ this.options.pokemonid+'">'+'<div class="pokeimg">'+'<img style="min-height:0px;" src="me.png" />'+'</div>'+'<div class="remainingtext" data-expire="'+ this.options.expire+'"></div>'+'</div>'}else{div.innerHTML='<div class="displaypokemon" data-pokeid="'+ this.options.pokemonid+'">'+'<div class="pokeimg">'+'<img src="me.png" />'+'</div>'+'<div class="remainingtext" data-expire="'+ this.options.expire+'"></div>'+'</div>';
+if(this.options.hide){div.innerHTML='<div class="displaypokemon hidden" data-pokeid="'+ this.options.pokemonid+'">'+'<div class="pokeimg">'+'<img style="min-height:0px;" src="https://life360-img.s3.amazonaws.com/img/user_images/90b5430d-98cf-48b4-95cb-37202f7346b1/0632af4b-80ab-4cfc-96f4-8ac4aeb10fdf.jpg?fd=2" />'+'</div>'+'<div class="remainingtext" data-expire="'+ this.options.expire+'"></div>'+'</div>'}else{div.innerHTML='<div class="displaypokemon" data-pokeid="'+ this.options.pokemonid+'">'+'<div class="pokeimg">'+'<img src="https://life360-img.s3.amazonaws.com/img/user_images/90b5430d-98cf-48b4-95cb-37202f7346b1/0632af4b-80ab-4cfc-96f4-8ac4aeb10fdf.jpg?fd=2" />'+'</div>'+'<div class="remainingtext" data-expire="'+ this.options.expire+'"></div>'+'</div>';
 };
 return div;
 },createShadow:function(){return null;
