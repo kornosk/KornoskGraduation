@@ -30,6 +30,8 @@
     
     <link rel="manifest" href="https://fastpokemap.se/img/manifest.json">
     <link rel="mask-icon" href="https://fastpokemap.se/img/safari-pinned-tab.svg" color="#ff2e48">
+
+    <!-- Slicknav CSS -->
     <link rel="stylesheet" href="https://fastpokemap.se/slicknav/slicknav.css" />
     
     <!-- Font Awesome CSS -->
@@ -88,14 +90,12 @@
     <!-- Mobile Header -->
     <div class="mobile-header">
         <ul id="menu">
-            <li><div type="button" class="btn btn-primary" onclick="open_facebook()">เฟสบุ้ค<i class="fa fa-facebook-square fa-lg"></i></div></li>
+            <li><a class="scroll" onclick="open_facebook()">เฟสบุ้ค</a></li>
             <li>
-                <div type="button" class="btn btn-warning" onclick="open_google_map()">กูเกิ้ลแมพ</div>
+                <a class="scroll" onclick="open_google_map()">กูเกิ้ลแมพ</a>
             </li>
             <li>
-                <div type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
-                    ประกาศ
-                </div>
+                <a class="scroll" data-toggle="modal" data-target="#myModal">กูเกิ้ลแมพ</a>
             </li>
         </ul>
     </div>

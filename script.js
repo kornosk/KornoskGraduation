@@ -241,7 +241,7 @@ $("#map").css('height','calc(100vh)');
 if(window.navigator.userAgent.indexOf('iPhone')!=-1&&window.navigator.standalone==true){$('body').addClass('homescreen');
 };
 $(function(){$('.nearby').hide();
-	$('#menu').slicknav({label:''});
+	$('#menu').slicknav({label:'เมนู'});
 	if(/iPad|iPhone|iPod/.test(navigator.userAgent)){$('.slicknav_menu').prepend('<div class="message"><strong>Kornosk Graduation Map</strong></div>');
 }else if(/(android)/i.test(navigator.userAgent)){$('.slicknav_menu').prepend('<div class="message"><strong>Kornosk Graduation Map</strong></div>');
 };
