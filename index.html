@@ -55,7 +55,7 @@
   <body ontouchstart="">
     <h1>Kornosk Graduation Map</h1>
 
-    <!-- Header -->
+    <!-- Desktop Header -->
     <div class="desktop-header">
         <div class="fpm-top-title">Kornosk Graduation Map</div>
 
@@ -76,6 +76,21 @@
                 </div>
             </span>
         </div>
+    </div>
+
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+        <ul id="menu">
+            <li><div type="button" class="btn btn-primary" onclick="open_facebook()">เฟสบุ้ค<i class="fa fa-facebook-square fa-lg"></i></div></li>
+            <li>
+                <div type="button" class="btn btn-warning" onclick="open_google_map()">กูเกิ้ลแมพ</div>
+            </li>
+            <li>
+                <div type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+                    ประกาศ
+                </div>
+            </li>
+        </ul>
     </div>
 
     <!-- Map -->
