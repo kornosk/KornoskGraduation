@@ -87,7 +87,26 @@
 
     <!-- Mobile Header -->
     <div class="mobile-header">
-        <ul id="menu">
+        <div class="fpm-top-title">Kornosk Graduation Map</div>
+
+        <!-- Button list -->
+        <div class="fpm-top-nav">
+            <!-- Facebook -->
+            <span class="top-nav-item">
+                <div type="button" class="btn btn-primary" onclick="open_facebook()">เฟสบุ้ค<i class="fa fa-facebook-square fa-lg"></i></div>
+            </span>
+            <!-- Google Map -->
+            <span class="top-nav-item">
+                <div type="button" class="btn btn-warning" onclick="open_google_map()">กูเกิ้ลแมพ</div>
+            </span>
+            <!-- Button trigger modal -->
+            <span class="top-nav-item">
+                <div type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">
+                    ประกาศ
+                </div>
+            </span>
+        </div>
+        <!-- <ul id="menu">
             <li><div type="button" class="btn btn-primary" onclick="open_facebook()">เฟสบุ้ค<i class="fa fa-facebook-square fa-lg"></i></div></li>
             <li>
                 <div type="button" class="btn btn-warning" onclick="open_google_map()">กูเกิ้ลแมพ</div>
@@ -97,7 +116,7 @@
                     ประกาศ
                 </div>
             </li>
-        </ul>
+        </ul> -->
     </div>
 
     <!-- Map -->

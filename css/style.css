@@ -602,6 +602,6 @@ input[type='checkbox']:checked {
 }
 
 /* Mobile Menu */
-div.mobile-header ul li {
+.mobile-header li div {
     margin: 5px;
 }
