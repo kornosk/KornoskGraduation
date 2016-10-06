@@ -67,10 +67,11 @@ body h1, body h2 {
     float: left;
     margin-left: 40px;
     font-weight: 300;
-    font-size: 35px;
+    font-size: 200%;
     color: #555555;
 }
 .fpm-top-nav {
+    width: 50%;
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -84,6 +85,8 @@ body h1, body h2 {
 }
 .top-nav-item {
     margin-left: 20px;
+    width: 25%;
+    float: right;
 }
 .top-nav-item a, .top-nav-item a:hover, .top-nav-item a:active, .top-nav-item a:visited {
     text-decoration:none;
@@ -604,4 +607,7 @@ input[type='checkbox']:checked {
 /* Mobile Menu */
 .mobile-header li div {
     margin: 5px;
+}
+div.fpm-top-nav .btn {
+    width: 100%;
 }
