@@ -244,17 +244,9 @@ if(window.navigator.userAgent.indexOf('iPhone')!=-1&&window.navigator.standalone
 $(function(){$('.nearby').hide();
 $('#menu').slicknav({label:'เมนู'});
 if(/iPad|iPhone|iPod/.test(navigator.userAgent)){
-<<<<<<< HEAD
 	$('.slicknav_menu').prepend('<div class="message"><img id="logo-img" src="img/logo.png">&nbsp;<strong>Graduation Map Mobile</strong></div>');
 } else if (/(android)/i.test(navigator.userAgent)){
 	$('.slicknav_menu').prepend('<div class="message"><img id="logo-img" src="img/logo.png">&nbsp;<strong>Graduation Map Mobile</strong></div>');
-=======
-
-	window.location('http://www.google.com');
-	$('.slicknav_menu').prepend('<div class="message"><img id="logo-img" src="img/logo.png">&nbsp;<strong>Graduation Map</strong></div>');
-} else if (/(android)/i.test(navigator.userAgent)){
-	$('.slicknav_menu').prepend('<div class="message"><img id="logo-img" src="img/logo.png">&nbsp;<strong>Graduation Map</strong></div>');
->>>>>>> 0576c4142acae231166ceb3a460fd468ead0a35f
 };
 var reversedPokemonNames=_.invert(pokemonNames);
 var orderedPokemonNames={};
