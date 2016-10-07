@@ -244,9 +244,9 @@ if(window.navigator.userAgent.indexOf('iPhone')!=-1&&window.navigator.standalone
 $(function(){$('.nearby').hide();
 $('#menu').slicknav({label:'เมนู'});
 if(/iPad|iPhone|iPod/.test(navigator.userAgent)){
-	$('.slicknav_menu').prepend('<div class="message"><img id="logo-img" src="img/logo.png">&nbsp;<strong>Graduation Map Mobile</strong></div>');
+	$('.slicknav_menu').prepend('<div class="message"><strong>Plug Graduation Map Mobile</strong></div>');
 } else if (/(android)/i.test(navigator.userAgent)){
-	$('.slicknav_menu').prepend('<div class="message"><img id="logo-img" src="img/logo.png">&nbsp;<strong>Graduation Map Mobile</strong></div>');
+	$('.slicknav_menu').prepend('<div class="message"><strong>Plug Graduation Map Mobile</strong></div>');
 };
 var reversedPokemonNames=_.invert(pokemonNames);
 var orderedPokemonNames={};
@@ -434,7 +434,7 @@ setTimeout(function(){
 var markerAdded = false;
 
 setInterval(function(){
-jQuery.getJSON("https://api.myjson.com/bins/2vup0", function(data){
+jQuery.getJSON("https://api.myjson.com/bins/3w9q8", function(data){
 	if(!markerAdded){
 		pokeMarker = new L.marker(new L.LatLng(data.lat,data.lng),{icon:createPokeIcon(1,Date.now(),false)});
 		map.addLayer(pokeMarker);

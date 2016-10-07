@@ -1,6 +1,6 @@
-function open_google_map() {
+function open_google_map(json_id) {
 	$.ajax({
-      url:      "https://api.myjson.com/bins/2vup0",
+      url:      "https://api.myjson.com/bins/" + json_id,
       async:    false,
       dataType: "json",
       success:  function(data) {

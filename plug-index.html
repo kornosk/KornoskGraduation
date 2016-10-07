@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Kornosk Graduation Map</title>
+    <title>Plug Graduation Map</title>
     <meta name="description" content="Kornosk Graduation Map" />
     <meta name="keywords" content="kornosk,graduation,chula,map">
     <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no,minimal-ui" />
@@ -11,12 +11,12 @@
     <meta name="mobile-web-app-capable" content="yes">
 
     <!-- Facebook -->
-      <meta property="og:title" content="Kornosk Graduation Map" />
-      <meta property="og:url" content="https://www.facebook.com/kornraphop.kawintiranon" />
+      <meta property="og:title" content="Plug Graduation Map" />
+      <meta property="og:url" content="https://www.facebook.com/plug.ekjit" />
       <!-- <meta property="og:image" content="https://raw.githubusercontent.com/kornosk/KornoskGraduation/master/img/sample_map.jpg" /> -->
       <meta property="og:image" content="https://raw.githubusercontent.com/kornosk/KornoskGraduation/master/img/sample_map.jpg" />
-      <meta property="og:site_name" content="Kornosk Graduation Map"/>
-      <meta property="og:description" content="Personal map website of Kornraphop Kawintiranon for Graduation Ceremony, Bangkok, Thailand"/>
+      <meta property="og:site_name" content="Plug Graduation Map"/>
+      <meta property="og:description" content="Personal map website of Supraween Ekjit for Graduation Ceremony, Bangkok, Thailand"/>
 
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" rel="stylesheet" />
@@ -48,7 +48,7 @@
     <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
     <script src="https://fastpokemap.se/js.cookie.js"></script>
     <script src="https://fastpokemap.se/s2.js"></script>
-    <script src="script.js"></script>
+    <script src="plug-script.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="googlemap-script.js"></script>
     <script src="https://fastpokemap.se/slicknav/jquery.slicknav.min.js"></script>
@@ -63,25 +63,24 @@
     
   </head>
   <body ontouchstart="">
-    <h1>Kornosk Graduation Map</h1>
+    <h1>Plug Graduation Map</h1>
 
     <!-- Desktop Header -->
     <div class="desktop-header row">
         <!-- <div class="col-md-6 fpm-top-title">&nbsp;&nbsp;Kornosk Graduation Map</div> -->
         <div class="col-xs-6 fpm-top-title">&nbsp;&nbsp;
-            <img id="logo-img" src="img/logo.png">
-            Graduation Map
+            Plug Graduation Map
          </div>
 
         <!-- Button list -->
         <div class="fpm-top-nav col-xs-6 row">
             <!-- Facebook -->
             <div class="top-nav-item col-xs-4">
-                <div type="button" class="btn btn-primary" onclick="open_facebook(1196052119)"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>&nbsp; เฟสบุ้ค</div>
+                <div type="button" class="btn btn-primary" onclick="open_facebook(100000964405781)"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>&nbsp; เฟสบุ้ค</div>
             </div>
             <!-- Google Map -->
             <div class="col-xs-4 top-nav-item">
-                <div type="button" class="btn btn-warning" onclick="open_google_map('2vup0')"><i class="fa fa-map"></i>&nbsp; กูเกิ้ลแมพ</div>
+                <div type="button" class="btn btn-warning" onclick="open_google_map('3w9q8')"><i class="fa fa-map"></i>&nbsp; กูเกิ้ลแมพ</div>
             </div>
             <!-- Button trigger modal -->
             <div class="col-xs-4 top-nav-item">
@@ -95,9 +94,9 @@
     <!-- Mobile Header -->
     <div class="mobile-header">
         <ul id="menu">
-            <li><a class="scroll" onclick="open_facebook(1196052119)"><i class="fa fa-facebook-square"></i>&nbsp; เฟสบุ้ค</a></li>
+            <li><a class="scroll" onclick="open_facebook(100000964405781)"><i class="fa fa-facebook-square"></i>&nbsp; เฟสบุ้ค</a></li>
             <li>
-                <a class="scroll" onclick="open_google_map('2vup0')"><i class="fa fa-map"></i>&nbsp; กูเกิ้ลแมพ</a>
+                <a class="scroll" onclick="open_google_map('3w9q8')"><i class="fa fa-map"></i>&nbsp; กูเกิ้ลแมพ</a>
             </li>
             <li>
                 <a class="scroll" data-toggle="modal" data-target="#myModal"><i class="fa fa-info-circle"></i>&nbsp; ประกาศ</a>
@@ -120,6 +119,8 @@
         </div>
     </div>
 
+    <div class="credit" id='bottom-credit'>by&nbsp;&nbsp;<img id="bottom-logo-credit" src="img/logo.png"></div>
+
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
       <div class="modal-dialog" role="document">
@@ -132,22 +133,22 @@
           <!-- Body of Annoucement -->
           <div class="modal-body row" style="text-align: center;">
             <div class="col-md-12">
-                <p><strong style="float: center;">ยินดีต้อนรับสู่แผนที่หาตำแหน่ง Kornosk</strong></p>
+                <p><strong style="float: center;">ยินดีต้อนรับสู่แผนที่หาตำแหน่ง Plug</strong></p>
 
                 <script>
                     $('#mobileTxt').click(function() {
                         this.innerHTML = " โทร: " +
-                        String.fromCharCode(48) + String.fromCharCode(56) + String.fromCharCode(53) +
+                        String.fromCharCode(48) + String.fromCharCode(56) + String.fromCharCode(48) +
                         "-" + 
-                        String.fromCharCode(51) + String.fromCharCode(51) + String.fromCharCode(57) +
+                        String.fromCharCode(53) + String.fromCharCode(56) + String.fromCharCode(52) +
                         "-" +
-                        String.fromCharCode(56) + String.fromCharCode(48) + String.fromCharCode(48) + String.fromCharCode(49);
+                        String.fromCharCode(55) + String.fromCharCode(53) + String.fromCharCode(55) + String.fromCharCode(53);
                     });
                 </script>
                 <br/>
-                <p><strong><a id="mobileTxt" href="javascript:void(0)">โทรศัพท์</a></strong> 085-339-8001</p>
-                <p><strong>ซ้อม</strong> 8 ต.ค. <strong>ว่าง</strong> 8:00-11:00 น.</p>
-                <p><strong>รับจริง</strong> 20 ต.ค. <strong>ว่าง</strong> 13:00-18:00 น.</p>
+                <p><strong><a id="mobileTxt" href="javascript:void(0)">โทรศัพท์</a></strong> 080-584-7575</p>
+                <p><strong>ซ้อม</strong> 8 ต.ค. <strong>ว่าง</strong> 8:30-17:00 น.</p>
+                <p><strong>รับจริง</strong> 20 ต.ค. <strong>ว่าง</strong> 07:30-11:00 น.</p>
                 <p>ขอบคุณที่มาถ่ายรูปรับปริญญาด้วยกันครับ!</p>
             </div>
           </div>

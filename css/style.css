@@ -622,3 +622,19 @@ div.fpm-top-nav .btn {
     width: 25%;
     height: 25%;
 }
+
+.credit {
+    font-size: 200%; 
+}
+
+#bottom-credit {
+    margin-top: 1%;
+    position: relative;
+    float: right;
+    width: 20%;
+    display: inline-block;
+}
+
+#bottom-logo-credit {
+
+}
