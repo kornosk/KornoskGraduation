@@ -65,21 +65,25 @@
     <h1>Kornosk Graduation Map</h1>
 
     <!-- Desktop Header -->
-    <div class="desktop-header">
-        <div class="fpm-top-title">Kornosk Graduation Map</div>
+    <div class="desktop-header row">
+        <!-- <div class="col-md-6 fpm-top-title">&nbsp;&nbsp;Kornosk Graduation Map</div> -->
+        <div class="col-md-6 fpm-top-title">&nbsp;&nbsp;
+            <img id="logo-img" src="img/logo.png">
+            Graduation Map
+         </div>
 
         <!-- Button list -->
-        <div class="fpm-top-nav">
+        <div class="fpm-top-nav col-md-6 row">
             <!-- Facebook -->
-            <div class="top-nav-item">
-                <div type="button" class="btn btn-primary" onclick="open_facebook()"><span class="fa fa-facebook-square fa-lg" aria-hidden="true"></span>&nbsp; เฟสบุ้ค</div>
+            <div class="top-nav-item col-md-4">
+                <div type="button" class="btn btn-primary" onclick="open_facebook()"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>&nbsp; เฟสบุ้ค</div>
             </div>
             <!-- Google Map -->
-            <div class="top-nav-item">
+            <div class="col-md-4 top-nav-item">
                 <div type="button" class="btn btn-warning" onclick="open_google_map()"><i class="fa fa-map"></i>&nbsp; กูเกิ้ลแมพ</div>
             </div>
             <!-- Button trigger modal -->
-            <div class="top-nav-item">
+            <div class="col-md-4 top-nav-item">
                 <div type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal"><i class="fa fa-info-circle"></i>&nbsp; 
                     ประกาศ
                 </div>
@@ -157,6 +161,16 @@
     <script type="text/javascript">
         // Start announcement modal
         $('#myModal').modal('show');
+
+        // Logo image
+        $('#logo-img').css( 'cursor', 'pointer' );
+        $('#logo-img').click(function(){ location.reload(); });
+
+        // Modify CSS
+        $('.slicknav_menu').css({
+            "position": "relative",
+            "right": "5%"
+        });
     </script>
 
     <!-- If no Javascript compiler -->

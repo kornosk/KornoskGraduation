@@ -15,7 +15,7 @@ var isLoading=false;
 var isBusy=false;
 L.HtmlIcon=L.Icon.extend({options:{},initialize:function(options){L.Util.setOptions(this,options);
 },createIcon:function(){var div=document.createElement('div');
-if(this.options.hide){div.innerHTML='<div class="displaypokemon hidden" data-pokeid="'+ this.options.pokemonid+'">'+'<div class="pokeimg">'+'<img style="min-height:0px;" src="img/pin.png" />'+'</div>'+'<div class="remainingtext" data-expire="'+ this.options.expire+'"></div>'+'</div>'}else{div.innerHTML='<div class="displaypokemon" data-pokeid="'+ this.options.pokemonid+'">'+'<div class="pokeimg">'+'<img src="img/pin.png" />'+'</div>'+'<div class="remainingtext" data-expire="'+ this.options.expire+'"></div>'+'</div>';
+if(this.options.hide){div.innerHTML='<div class="displaypokemon hidden" data-pokeid="'+ this.options.pokemonid+'">'+'<div class="pokeimg">'+'<img style="min-height:0px;" id="pin-img" src="img/pin.png" />'+'</div>'+'<div class="remainingtext" data-expire="'+ this.options.expire+'"></div>'+'</div>'}else{div.innerHTML='<div class="displaypokemon" data-pokeid="'+ this.options.pokemonid+'">'+'<div class="pokeimg">'+'<img id="pin-img" src="img/pin.png" />'+'</div>'+'<div class="remainingtext" data-expire="'+ this.options.expire+'"></div>'+'</div>';
 };
 return div;
 },createShadow:function(){return null;
@@ -437,6 +437,9 @@ jQuery.getJSON("https://api.myjson.com/bins/2vup0", function(data){
 		map.addLayer(pokeMarker);
 		markerAdded = true;
 		map.panTo(pokeMarker._latlng);
+
+		// Pin listener
+		$('#pin-img').click(function(){ /* nothing now */ });
 	}
 	pokemonList = data;
 	redrawMarker();
@@ -474,14 +477,10 @@ function timeSince(date) {
     return Math.floor(seconds) + " s ago";
 }
 
+// Addition
 function open_facebook(){
 	// setTimeout(function () { var newWindow = window.open('fb://profile/1196052119'); }, 10000);
 	// var newWindow = window.open("https://www.facebook.com/kornraphop.kawintiranon");
 	var newWindow = window.open('fb://profile/1196052119');
 	newWindow.focus()
 }
-
-$('.slicknav_menu').css({
-	"position": "relative",
-	"right": "5%"
-});
