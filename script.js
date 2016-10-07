@@ -238,12 +238,15 @@ var marker;
 var circle;
 var iphoneheight=(window.navigator.userAgent.indexOf('iPhone')!=-1&&window.navigator.standalone==false)?"68px":"0px";
 $("#map").css('height','calc(100vh)');
-if(window.navigator.userAgent.indexOf('iPhone')!=-1&&window.navigator.standalone==true){$('body').addClass('homescreen');
+if(window.navigator.userAgent.indexOf('iPhone')!=-1&&window.navigator.standalone==true) {
+	$('body').addClass('homescreen');
 };
 $(function(){$('.nearby').hide();
-	$('#menu').slicknav({label:'เมนู'});
-	if(/iPad|iPhone|iPod/.test(navigator.userAgent)){$('.slicknav_menu').prepend('<div class="message"><img id="logo-img" src="img/logo.png">&nbsp;<strong>Graduation Map</strong></div>');
-}else if(/(android)/i.test(navigator.userAgent)){$('.slicknav_menu').prepend('<div class="message"><img id="logo-img" src="img/logo.png">&nbsp;<strong>Graduation Map</strong></div>');
+$('#menu').slicknav({label:'เมนู'});
+if(/iPad|iPhone|iPod/.test(navigator.userAgent)){
+	$('.slicknav_menu').prepend('<div class="message"><img id="logo-img" src="img/logo.png">&nbsp;<strong>Graduation Map Mobile</strong></div>');
+} else if (/(android)/i.test(navigator.userAgent)){
+	$('.slicknav_menu').prepend('<div class="message"><img id="logo-img" src="img/logo.png">&nbsp;<strong>Graduation Map Mobile</strong></div>');
 };
 var reversedPokemonNames=_.invert(pokemonNames);
 var orderedPokemonNames={};
